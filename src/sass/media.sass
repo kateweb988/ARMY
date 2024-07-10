@@ -1,0 +1,559 @@
+@media screen and (max-width: 1600px)
+   .container
+      max-width: 1350px !important
+      padding: 0 40px
+   h1, h1 span
+      font-size: 62px
+   .header__text
+      font-size: 18px
+   .popup, .popup2
+      width: 95%
+   .info h2
+      font-size: 190px
+   .info__name
+      font-size: 29px
+   .info__sub, .info__bottom p
+      margin-right: 80px
+   .panel__text p, .panel__text span
+      font-size: 22px
+   .info__sum
+      font-size: 50px
+   .info__area p
+      font-size: 17px
+      margin-right: 28px
+   .info__text
+      font-size: 17px
+   .info__image img
+      width: 100%
+   .area h2
+      font-size: 120px
+   .area .accordeon__panel .panel__text p span
+      font-size: 18px
+   .faq h2 
+      font-size: 145px
+      margin-bottom: 101px
+   .contacts h2 
+      font-size: 205px
+      margin-bottom: 110px
+   .info__block
+      padding: 40px
+@media screen and (max-width: 1350px)
+   .container
+      max-width: 1200px !important
+   h1, h1 span 
+      font-size: 50px
+      line-height: 126%
+   .info h2
+      font-size: 150px
+   .info__sum
+      font-size: 44px
+   .info__area
+      flex-wrap: wrap
+   .info__area p
+      margin-bottom: 9px
+   .info__right
+      margin-bottom: 0
+   .info__name
+      font-size: 25px
+   .area h2
+      font-size: 100px
+   .faq h2
+      font-size: 120px
+   .accordeon .accordeon__button
+      font-size: 21px
+   .faq .panel__text
+      font-size: 18px
+      line-height: 28px
+   .contacts h2
+      font-size: 174px
+   .contacts__sub
+      font-size: 21px
+@media screen and (max-width: 1199px)
+   .menu-btn 
+      width: 43px
+      height: 43px
+      position: absolute
+      top: 20px
+      right: 0px
+      z-index: 11
+      background: url(/img/bur1.svg) no-repeat center center
+      overflow: hidden
+   .menu-btn span 
+      width: 38px
+      height: 2px
+      position: absolute
+      top: 50%
+      display: none
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-color: $yellow
+      transition: all 0.5s
+   .menu-btn span:nth-of-type(2) 
+      top: calc(50% - 8.5px)
+      width: 38px
+      height: 2px
+   .menu-btn span:nth-of-type(3) 
+      top: calc(50% + 9.4px)
+      width: 38px
+      height: 2px
+   .menu 
+      position: fixed
+      top: 0
+      right: 0
+      width: 100%
+      height: 100%
+      padding: 150px 40px 40px
+      background: rgb(28, 26, 31)
+      transform: translateX(500%)
+      transition: transform 0.5s
+      z-index: 7
+      overflow: hidden
+      text-align: right
+      .header__links
+         margin-left: auto
+         display: flex
+         justify-content: flex-end
+         flex-direction: column
+         align-items: flex-end
+      .header__links a:first-child
+         margin-right: 0
+         margin-bottom: 20px
+      &__name 
+         color: rgb(255, 255, 255)
+         font-size: 20px
+         font-weight: 600
+         line-height: 30px
+         margin-bottom: 30px
+      ul 
+         margin-bottom: 10px
+         li 
+            margin-bottom: 30px
+            a 
+               color: rgb(255, 255, 255)
+               font-size: 14px
+               font-weight: 500
+               text-transform: uppercase
+               line-height: 17px
+      &__text 
+         color: rgb(255, 255, 255)
+         font-size: 20px
+         font-weight: 600
+         line-height: 30px
+         margin-bottom: 40px
+      &__tel 
+         font-weight: 600
+         font-size: 20px
+         color: white 
+         display: block
+         margin-bottom: 10px
+   .menu.active
+      transform: translateX(0)
+   .menu-btn.active 
+      overflow: visible
+      // position: fixed
+      top: 20px
+      right: 0px
+      z-index: 11
+      background: url(/img/bur2.svg) no-repeat center center
+   .menu-btn.active span:nth-of-type(1) 
+      display: none
+   .menu-btn.active span:nth-of-type(2) 
+      top: 50%
+      width: 24px
+      transform: translate(-50%, 0%) rotate(45deg)
+      margin-left: 0
+   .menu-btn.active span:nth-of-type(3) 
+      width: 24px
+      top: 50%
+      transform: translate(-50%, 0%) rotate(-44deg)
+      margin-left: 0
+   .menu-btn, .menu
+      display: block
+   .nav__box ul, .nav__info
+      display: none
+   .nav__box
+      border-radius: 0px
+      padding: 0
+      position: relative
+      border-top: 1px solid rgb(63, 63, 63)
+      border-bottom: 1px solid rgb(63, 63, 63)
+      z-index: 20
+      &:before 
+         content: ""
+         display: block
+         position: absolute
+         top: -1px
+         left: -200% 
+         width: 200%
+         background: rgb(28, 26, 31)
+         height: 102%
+      &:after  
+         content: ""
+         display: block
+         position: absolute
+         top: -1px
+         right: -200% 
+         width: 200%
+         background: rgb(28, 26, 31)
+         height: 102%
+   .header
+      margin-top: 0
+   .header__text
+      position: relative
+      top: 0
+      right: 0
+      margin-bottom: 40px
+   .header__box
+      margin-top: 50px
+   .header__links
+      margin: 40px 0
+   .socials
+      display: none
+   .info
+      padding: 60px 0
+   .info h2
+      margin-left: 0
+      font-size: 118px
+      letter-spacing: inherit
+   .info__sub, .info__bottom p 
+      margin-right: 0
+      min-width: inherit
+   .info__top
+      margin: 60px 0 40px
+      flex-direction: column 
+      align-items: flex-start
+   .info__sub
+      margin-bottom: 30px
+   .info__bottom
+      flex-direction: column 
+      align-items: flex-start
+   .info__btn
+      top: 0
+      margin-top: 60px
+   .info__bottom p
+      max-width: 100%
+   .accordeon
+      margin-top: 60px
+   .panel__text span
+      min-width: 133px
+   .info__sum
+      margin-bottom: 36px
+      font-size: 35px
+   .info__text
+      font-size: 16px
+   .info__wrap
+      flex-direction: column 
+      align-items: center
+   .info__man
+      margin-right: 0
+   .info__wrap
+      margin-top: -30px
+      margin-left: 0
+   .info__right
+      margin-top: 50px
+   .info__right a
+      margin-top: 80px
+   .info__items
+      justify-content: center
+      flex-wrap: wrap
+   .info__el
+      width: 28%
+      margin: 20px
+   .area, .faq, .contacts
+      padding: 60px 0
+   .area h2
+      font-size: 85px
+   .area .accordeon__panel .panel__text p
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+   .area .accordeon__panel .panel__text p span
+      margin-left: 0
+      display: block
+      margin-top: 5px
+   .faq h2
+      font-size: 90px
+      margin-bottom: 60px
+   .faq .accordeon .accordeon__button
+      padding: 0 130px 0 20px
+      font-size: 18px
+   .footer
+      padding: 50px 0
+   .footer__box
+      flex-direction: column
+   .footer__info
+      text-align: left
+      margin-top: 40px
+   .footer__com
+      justify-content: flex-start
+   .contacts h2
+      margin-bottom: 60px
+      font-size: 137px
+   .contacts__row
+      flex-direction: column 
+      align-items: flex-start
+   .contacts__links
+      margin-left: 0
+      margin-top: 10px
+   .contacts__sub
+      margin: 30px 0
+   .header
+      padding-top: 20px
+@media ( max-width: 991px )
+   input, textarea, select
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+   .info__flex
+      flex-direction: column
+   .info__block
+      width: 100%
+      margin-bottom: 20px
+      padding: 40px 20px
+   .info__area
+      margin-bottom: 30px
+   .info__el
+      width: 41%
+   .area h2,  .faq h2
+      font-size: 67px
+   .faq .accordeon .accordeon__button
+      br 
+         display: none
+   .contacts h2
+      font-size: 100px
+@media screen and (max-width: 767px)
+   h1, h1 span
+      font-size: 25px
+   h1 span 
+      -webkit-text-stroke: 1px white
+   .header__box
+      .header__links
+         flex-direction: column 
+         a 
+            width: 100%
+            &:first-child
+               margin-right: 0
+               margin-bottom: 20px
+   .popup__title
+      margin-bottom: 30px
+      font-size: 20px
+   .form-item
+      width: 100%
+   .form button
+      width: 100%
+   .popup, .popup2
+      padding: 80px 20px 40px
+   .close-popup, .close-popup2
+      top: 20px
+      right: inherit
+      left: 20px
+   .form-input
+      font-size: 14px
+   .form-label
+      font-size: 14px
+   .form-input:focus ~ .form-label, .form-input:not(:focus):valid ~ .form-label
+      font-size: 10px
+   .header .swiper1
+      margin-right: 0
+      width: 100%
+   .header .swiper-pagination-progressbar
+      right: 0
+   .header__text
+      text-align: center
+   .btn
+      font-size: 14px
+      height: 65px !important
+   .header__num
+      position: absolute
+      bottom: -72px
+      left: 50%
+      width: 340px
+      margin-left: -170px
+   .header
+      padding-bottom: 106px
+   .header .swiper-pagination-progressbar
+      bottom: -72px
+      left: 50%
+      width: 260px
+      margin-left: -130px
+   .header .swiper1 .swiper-slide
+      flex-direction: column
+   .header .swiper1 .swiper-slide img
+      width: 100%
+      margin-right: 0
+      margin-bottom: 20px
+   .header__content h3
+      font-size: 20px
+      margin-bottom: 50px
+   .header__content
+      height: auto
+   .header__content p
+      width: 80%
+      font-size: 14px
+   .header .swiper1 .swiper-slide span 
+      position: absolute
+      top: inherit
+      bottom: -50px
+      left: 85px
+   .info h2
+      font-size: 47px
+   .info__bottom p
+      font-size: 14px
+      line-height: 30px
+   .info__btn
+      width: 100%
+   .accordeon .accordeon__button
+      font-size: 14px
+      padding-left: 20px
+   .panel__text p, .panel__text span
+      font-size: 14px
+   .panel__text
+      padding: 20px
+   .panel__text span
+      min-width: 75px 
+      margin-right: 26px
+   .accordeon .accordeon__button:after
+      width: 47px
+      height: 47px
+      background-size: 100% !important
+      margin-top: -23px
+      right: 20px
+   .info__area p
+      font-size: 14px
+   .info__sum
+      font-size: 25px
+   .info__text
+      font-size: 14px
+      line-height: 30px
+   .info__link
+      margin-top: 20px
+      width: 100%
+   .info__man
+      max-width: 100%
+   .info__right
+      max-width: 100%
+   .info__right ul li p
+      font-size: 14px
+   .info__right img 
+      width: 36px
+   .info__right a
+      margin-top: 50px
+   .info__name .bb
+      font-size: 14px
+      line-height: 17px
+      margin-top: 30px
+   .info__name
+      font-size: 20px
+   .info__top
+      margin-bottom: 20px
+   .info__el
+      width: 100% 
+      margin: 0 auto 20px
+   .info__el p
+      font-size: 25px
+   .area h2
+      font-size: 27px
+   .area, .faq, .contacts
+      padding: 30px 0
+   .info__top
+      margin-top: 40px
+   .area .accordeon__panel .panel__text span
+      min-width: 15px
+   .area 
+      .panel__text span:after 
+         top: -45px
+         height: 109px
+   .faq h2
+      font-size: 30px
+      margin-bottom: 40px
+   .faq .accordeon .accordeon__button
+      font-size: 14px
+   .faq .panel__text
+      font-size: 14px
+   .accordeon__item
+      margin-bottom: 20px
+   .contacts h2
+      font-size: 42px
+   .contacts__item
+      flex-direction: column 
+      align-items: flex-start
+      p 
+         font-size: 18px
+   .contacts__item a
+      margin-left: 0
+      margin-top: 5px
+      font-size: 18px
+   .contacts__links a
+      font-size: 18px
+   .contacts__sub
+      font-size: 16px
+   .contacts
+      .info__link
+         margin-top: 40px
+   .footer__tel
+      font-size: 20px
+      margin-bottom: 30px
+   .footer__policy
+      font-size: 14px
+   .footer__info
+      margin-top: 30px
+   .footer__name
+      font-size: 14px
+      margin-bottom: 10px
+   .footer__text
+      font-size: 14px
+@media screen and (max-width: 576px)
+   button:active, button:focus 
+      outline: none
+   button::-moz-focus-inner 
+      border: 0
+   a:active, a:focus
+      outline: none
+   input, textarea
+      outline: none
+   input:active, textarea:active
+      outline: none
+   input:focusout
+      outline: none
+   .mm 
+      flex-direction: column 
+      align-items: center
+      justify-content: center
+      li 
+         margin-bottom: 40px !important
+         width: 100% !important
+         margin-top: 0 !important
+   .mob 
+      display: block !important
+   .header
+      border-radius: 0
+   .container
+      padding: 0 20px
+   .header__content p
+      width: 100%
+      min-height: 72px
+   .header .swiper-pagination-progressbar
+      width: 240px
+      margin-left: -120px
+   .header__num 
+      bottom: -73px
+      width: 310px
+      margin-left: -155px
+   .header .swiper1 .swiper-slide span
+      left: -6px
+   .accordeon .accordeon__button
+      font-size: 13px
+   .panel__text span:after
+      height: 84px
+      top: 50%
+      margin-top: -42px
+   .info__area p span
+      margin-left: 5px
+   .info__right ul li p
+      line-height: 25px
+   .area .panel__text span:after 
+      top: 50%
+      height: 110px
+      margin-top: -55px
+   .faq .panel__text
+      margin-top: 20px
