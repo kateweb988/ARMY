@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  $('.menu li a').click(function (event) {
+  $('.menu li .go_to').click(function (event) {
     $('.menu-btn').toggleClass('active');
     $('.menu').toggleClass('active');
     return false;
@@ -90,73 +90,71 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  //popup1
-  let popupBg = document.querySelector('.popup__bg');
-  let popup = document.querySelector('.popup');
-  let openPopupButtons = document.querySelectorAll('.nav__link, .header__btn2, .info__link');
-  let closePopupButton = document.querySelector('.close-popup');
-
-  openPopupButtons.forEach((button) => {
-    button.addEventListener('click', (e) => {
+  $(document).ready(function () {
+    $('[data-submit]').on('click', function (e) {
       e.preventDefault();
-      popupBg.classList.add('active');
-      popup.classList.add('active');
+      $(this).parents('form').submit();
+    })
+    $.validator.addMethod(
+      "regex",
+      function (value, element, regexp) {
+        var re = new RegExp(regexp);
+        return this.optional(element) || re.test(value);
+      },
+      "Please check your input."
+    );
+    function valEl(el) {
+
+      el.validate({
+        rules: {
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          email: {
+            required: 'Заполните поле',
+            email: 'Неверный формат E-mail'
+          }
+        },
+        submitHandler: function (form) {
+          $('#loader').fadeIn();
+          var $form = $(form);
+          var $formId = $(form).attr('id');
+          switch ($formId) {
+            case 'popupResult':
+              $.ajax({
+                type: 'POST',
+                url: $form.attr('action'),
+                data: $form.serialize(),
+              })
+                .always(function (response) {
+                  setTimeout(function () {
+                    $('#loader').fadeOut();
+                  }, 800);
+                  window.location = "/thanks.html";
+
+                });
+              break;
+          }
+          return false;
+        }
+      })
+    }
+
+    $('.js-form').each(function () {
+      valEl($(this));
+    });
+    $('[data-scroll]').on('click', function () {
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'data-scroll')).offset().top
+      }, 2000);
+      event.preventDefault();
     })
   });
-
-  closePopupButton.addEventListener('click', () => {
-    popupBg.classList.remove('active');
-    popup.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (e.target === popupBg) {
-      popupBg.classList.remove('active');
-      popup.classList.remove('active');
-    }
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      //ваша функция закрытия окна
-      popupBg.classList.remove('active');
-      popup.classList.remove('active');
-    }
-  });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  //popup2
-  let popupBg2 = document.querySelector('.popup__bg2');
-  let popup2 = document.querySelector('.popup2');
-  let openPopupButtons2 = document.querySelectorAll('.info__btn');
-  let closePopupButton2 = document.querySelector('.close-popup2');
 
-  openPopupButtons2.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      popupBg2.classList.add('active');
-      popup2.classList.add('active');
-    })
-  });
-
-  closePopupButton2.addEventListener('click', () => {
-    popupBg2.classList.remove('active');
-    popup2.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (e.target === popupBg2) {
-      popupBg2.classList.remove('active');
-      popup2.classList.remove('active');
-    }
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      //ваша функция закрытия окна
-      popupBg2.classList.remove('active');
-      popup2.classList.remove('active');
-    }
-  });
-});
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper1', {
     slidesPerView: 1,
@@ -193,6 +191,68 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  const swiper3 = new Swiper('.swiper3', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next3',
+      prevEl: '.swiper-button-prev3',
+    },
+    on: {
+      init: function () {
+        updateCustomPagination(this);
+      },
+      slideChange: function () {
+        updateCustomPagination(this);
+      },
+    },
+    breakpoints: {
+      320: {
+        spaceBetween: 0,
+        loop: true,
+        slidesPerView: 1,
+        navigation: false,
+        pagination: false
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        navigation: false,
+        pagination: false
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 2,
+        navigation: {
+          nextEl: '.swiper-button-next3',
+          prevEl: '.swiper-button-prev3',
+        },
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 2,
+        navigation: {
+          nextEl: '.swiper-button-next3',
+          prevEl: '.swiper-button-prev3',
+        },
+      }
+    }
+  });
+
+  // функция обновления пагинации
+  function updateCustomPagination(swiper) {
+    const current = swiper.realIndex + 1;
+    const total = swiper.slides.length;
+    const percent = (current / total) * 100;
+
+    const pagination = document.querySelector('.swiper-custom-pagination3');
+    if (pagination) {
+      pagination.querySelector('.current').textContent = ('0' + current).slice(-2);
+      pagination.querySelector('.total').textContent = ('0' + total).slice(-2);
+      pagination.querySelector('.bar-fill').style.width = percent + '%';
+    }
+  }
+
 });
 document.addEventListener("DOMContentLoaded", () => {
   let menuBtn = document.querySelector('.menu-btn');

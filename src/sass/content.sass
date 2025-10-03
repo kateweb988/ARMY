@@ -1,4 +1,5 @@
-.close-popup, .close-popup2
+
+.box-modal__close 
    position: absolute
    top: 60px
    right: 50px
@@ -8,7 +9,29 @@
    height: 43px
    z-index: 20
    &:hover 
-      transform: rotate(90deg)
+      img
+         transition: 0.5s
+         transform: rotate(90deg)
+.box-modal 
+   position: relative
+.popup-call__box 
+   position: absolute
+   top: 40%
+   margin-top: -300px
+   left: 50%
+   height: auto
+   margin-left: -800px
+   overflow: hidden
+   width: 1600px
+   border-radius: 10px
+   background: rgb(43, 40, 47)
+   padding: 50px
+.arcticmodal-container
+   background: rgba(0, 0, 0, 0.7)
+label.error
+   display: none !important
+input.error 
+   border: 1px solid red
 input::-webkit-input-placeholder 
    color: #626262 !important
 input::-moz-placeholder
@@ -19,37 +42,6 @@ input:-moz-placeholder
    color: #626262 !important
 .menu-btn, .menu
    display: none
-.popup__bg, .popup__bg2
-   position: fixed
-   top: 0
-   left: 0
-   width: 100%
-   height: 100vh
-   background: rgba(0, 0, 0, 0.7)
-   opacity: 0
-   pointer-events: none
-   transition: 0.5s all
-   overflow-y: auto
-   overflow-x: hidden
-.popup__bg.active, .popup__bg2.active
-    opacity: 1
-    pointer-events: all
-    transition: 0.5s all
-    z-index: 22
-.popup, .popup2
-   position: absolute
-   top: 49%
-   left: 50%
-   transform: translate(-50%, -50%) scale(0)
-   height: max-content
-   transition: 0.5s all
-   width: 1600px
-   border-radius: 10px
-   background: rgb(43, 40, 47)
-   padding: 50px
-.popup.active, .popup2.active
-   transform: translate(-50%, -46%) scale(1)
-   transition: 0.5s all
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
    display: none
 .custom-checkbox 
@@ -164,7 +156,7 @@ input:-moz-placeholder
    list-style-type: none
    padding-top: 0px
    max-width: 688px
-   margin-top: 30px
+   margin-top: 27px
 .panel__info
    font-weight: 300
    font-size: 16px
@@ -265,6 +257,16 @@ input:-moz-placeholder
    max-width: 1600px 
    margin: 40px auto 0
    padding: 40px 0 70px
+   &__txt 
+      color: rgba(255, 255, 255, 1)
+      font-size: 20px
+      font-weight: 700
+      line-height: 30px
+      text-transform: uppercase
+      margin-bottom: 34px
+      width: 100%
+      max-width: 780px
+      margin: 34px 0 37px
    &__bg 
       position: absolute
       z-index: -1
@@ -286,7 +288,7 @@ input:-moz-placeholder
       line-height: 24px
       text-transform: uppercase
    &__links 
-      margin: 114px 0 74px
+      margin: 0px 0 124px
       a 
          &:first-child
             margin-right: 20px
@@ -323,6 +325,7 @@ input:-moz-placeholder
             text-transform: uppercase
    &__info 
       position: relative
+      display: block !important
    &__num 
       display: flex
       width: 588px
@@ -401,6 +404,8 @@ input:-moz-placeholder
       position: relative
       top: 2px
       margin-right: 20px
+      &.black 
+         color: $yellow
    &__links
       margin-left: auto
       a 
@@ -416,9 +421,19 @@ input:-moz-placeholder
          &:hover 
             opacity: 0.8
 .info 
-   padding: 127px 0 100px
+   padding: 102px 0 85px
+   &__txt 
+      margin-bottom: 128px
+      p
+         color: rgba(255, 255, 255, 1)
+         font-size: 20px
+         font-weight: 400
+         line-height: 30px
+         margin-bottom: 30px
+         &:last-child
+            margin-bottom: 0
    &__sub 
-      font-size: 20px
+      font-size: 25px
       font-weight: 500
       min-width: 655px
       margin-right: 155px
@@ -429,30 +444,38 @@ input:-moz-placeholder
    &__top 
       margin-bottom: 72px
       align-items: flex-start
-      margin-top: 150px
+      margin-top: 129px
+   &__top2
+      margin: 152px 0 46px
+   &__top3
+      margin: 152px 0 80px
+   &__top4
+      margin: 173px 0 42px
+   &__top5
+      margin: 158px 0 53px
    &__name 
       font-size: 40px
       font-weight: 700
-      line-height: 130.09%
+      line-height: 120.09%
       text-transform: uppercase
       .bb 
          color: rgb(255, 255, 255)
-         font-size: 20px
+         font-size: 25px
          font-weight: 700
-         line-height: 24px
+         line-height: 100%
          display: block
          text-transform: uppercase
-         margin-top: 50px
+         margin-top: 58px
    &__bottom 
       align-items: flex-end
       p 
          color: rgba(255, 255, 255, 0.7)
-         font-size: 20px
+         font-size: 25px
          font-weight: 400
          line-height: 30px
          width: 100%
-         max-width: 655px 
-         margin-right: 155px
+         max-width: 739px
+         margin-right: 70px
    h2 
       letter-spacing: 1.9rem
       position: relative
@@ -461,7 +484,7 @@ input:-moz-placeholder
       max-width: 1629px
    &__btn 
       position: relative
-      top: 30px
+      top: 0px
    &__flex 
       justify-content: space-between
    &__block 
@@ -475,29 +498,32 @@ input:-moz-placeholder
       font-weight: 700
       line-height: 120%
       text-transform: uppercase
-      margin-bottom: 66px
-   &__area 
       margin-bottom: 50px
+   &__area 
+      margin-bottom: 44px
+      flex-wrap: wrap
       p 
-         font-size: 20px
+         font-size: 25px
          font-weight: 400
          line-height: 30px
          text-transform: uppercase
          color: rgba(255, 255, 255, 0.6)
-         margin-right: 35px
+         margin-right: 46px
+         margin-bottom: 40px
          span 
             font-weight: 800
             color: white
          &:last-child
             margin-right: 0
+            margin-bottom: 0
    &__text 
       color: rgb(255, 255, 255)
-      font-size: 20px
+      font-size: 25px
       font-weight: 400
       line-height: 30px
       text-transform: uppercase
    &__link 
-      margin-top: 50px
+      margin-top: 34px
       background: transparent
       width: 100%
       color: $yellow
@@ -525,11 +551,11 @@ input:-moz-placeholder
             align-items: center
             p 
                color: rgb(255, 255, 255)
-               font-size: 20px
+               font-size: 25px
                font-weight: 500
                line-height: 30px
                text-transform: uppercase
-               margin-left: 31px
+               margin-left: 49.5px
    &__items 
       justify-content: space-between
    &__el
@@ -561,7 +587,7 @@ input:-moz-placeholder
       margin-top: auto
       display: flex
       align-items: center
-      height: 196px
+      height: 225px
       justify-content: center
       position: relative
       img 
@@ -653,59 +679,72 @@ input:-moz-placeholder
       line-height: 130.09%
       text-transform: uppercase
 .area 
-   padding: 100px 0 
+   padding: 75px 0 70px
    .container
       max-width: 1629px
    h2 
-      font-size: 143px
+      font-size: 194px
       font-weight: 700
+      letter-spacing: 0.6rem
    .accordeon__panel
       max-height: initial !important
       .panel__text
          span 
             min-width: 50px
+            padding-right: 15px
+            margin-right: 33px
          p 
             font-weight: 700
             span 
                margin-right: 0 !important
                padding-right: 0 !important
                color: rgb(255, 255, 255)
-               font-size: 20px
+               font-size: 25px
                font-weight: 400
                min-width: inherit !important
                line-height: 130.09%
                text-transform: lowercase
                display: inline
-               margin-left: 23px
+               margin-left: 62px
                &:after 
                   display: none
+         &:nth-child(1)
+            p span
+               margin-left: 263px 
+         &:nth-child(3)
+            p span
+               margin-left: 141px 
 .faq 
-   padding: 100px 0
+   padding: 100px 0 61px
    .container
       max-width: 1629px
    h2 
       font-size: 169px
+      letter-spacing: 0.7rem
       margin-bottom: 120px
    .panel__text
       padding: 0
       width: 100%
-      max-width: 1055px
+      max-width: 100%
       border: none
       color: rgb(255, 255, 255)
-      font-size: 20px
+      font-size: 25px
       font-weight: 500
       line-height: 30px
    .container
       max-width: 1629px
-   .accordeon .accordeon__button
-      padding-right: 200px
+   .accordeon
+      margin-top: 167px
+      .accordeon__button
+         padding-right: 200px
 .contacts 
-   padding: 75px 0 150px 
+   padding: 50px 0 150px 
    .container
       max-width: 1629px
    h2 
       font-size: 239px
-      margin-bottom: 120px
+      margin-bottom: 130px
+      letter-spacing: 0.6rem
    &__row 
       align-items: center
    &__item 
@@ -724,7 +763,7 @@ input:-moz-placeholder
          &:hover 
             color: $yellow
    &__links 
-      margin-left: 40px
+      margin-left: 48px
       a
          font-weight: 600
          color: $yellow
@@ -732,12 +771,26 @@ input:-moz-placeholder
          line-height: 140%
          &:hover 
             color: white
+         &:last-child
+            margin-left: 10px
    &__sub 
       color: rgb(255, 255, 255)
       font-size: 25px
       font-weight: 600
       line-height: 30px
+      margin: 36px 0
+   &__map 
+      width: 100%
       margin: 50px 0
+   &__images 
+      justify-content: space-between
+      align-items: center
+      img 
+         width: 32.5%
+         object-fit: cover 
+         height: 600px
+         border-radius: 10px
+         overflow: hidden
 #map 
    height: 600px
    border-radius: 10px
@@ -751,7 +804,7 @@ input:-moz-placeholder
       max-width: 1629px
    &__box 
       justify-content: space-between
-      align-items: flex-start
+      align-items: center
    &__tel 
       color: rgb(255, 255, 255)
       font-size: 40px
@@ -776,7 +829,7 @@ input:-moz-placeholder
       font-size: 20px
       font-weight: 600
       line-height: 30px
-      margin-bottom: 20px
+      margin-bottom: 15px
       color: white
    &__text 
       font-size: 20px
@@ -830,7 +883,7 @@ input:-moz-placeholder
 .form-label 
    position: absolute
    pointer-events: none
-   left: 15px
+   left: 22px
    right: 15px
    top: 26px
    white-space: nowrap
@@ -853,3 +906,321 @@ input:-moz-placeholder
       line-height: 130.09%
       text-transform: uppercase
       margin-bottom: 38px
+.header__info
+   display: none
+#popup-thank
+   h2 
+      font-size: 40px
+   .popup-call__box
+      width: 600px
+      margin-left: -300px
+      padding-top: 70px
+      p 
+         margin-top: 40px
+         text-align: center
+         font-size: 21px
+         line-height: 120%
+   .box-modal__close
+      right: 10px
+      top: 10px
+.page 
+   .header 
+      border: 2px solid rgb(244, 188, 32)
+      padding-bottom: 180px
+      p 
+         position: relative   
+         top: 0
+         right: 0
+      h1 
+         font-size: 45px
+         line-height: 55px
+         margin-bottom: 35px
+         span 
+            -webkit-text-stroke: inherit
+            display: initial
+            line-height: normal
+            letter-spacing: inherit
+            font-family: inherit
+            margin-top: 0
+            font-size: inherit
+            color: $yellow
+      .header__text
+         width: 100%
+         max-width: 920px
+         color: rgba(255, 255, 255, 1)
+         font-size: 20px
+         font-weight: 700
+         line-height: 30px
+         text-transform: uppercase
+      .header__sub 
+         margin-bottom: 35px
+         color: rgb(244, 188, 32)
+         font-size: 25px
+         font-weight: 700
+         line-height: 130.09%
+         text-transform: uppercase
+      .header__box
+         position: relative
+         display: flex
+         align-items: flex-start
+         justify-content: space-between
+         margin-top: 50px
+         ul 
+            margin-top: 60px
+            li 
+               text-align: right
+               margin-bottom: 20px
+               color: rgb(255, 255, 255)
+               font-size: 25px
+               font-weight: 500
+               line-height: 120%
+               text-transform: uppercase
+      &__left 
+         padding: 39px 70px 50px 0
+         border-radius: 0px 40px 40px 0px
+         background: rgba(28, 26, 31, 0.75)
+         position: relative
+         &:before 
+            position: absolute
+            left: -500%
+            top: 0
+            width: 500%
+            background: rgba(28, 26, 31, 0.75)
+            height: 100%
+            content: ""
+   .header2
+      padding-bottom: 50px
+.text 
+   padding-bottom: 0
+   margin-bottom: 0
+   .info__name
+      margin-bottom: 50px
+   &__el 
+      width: 100%
+      max-width: 82% 
+      color: rgba(255, 255, 255, 1)
+      font-size: 25px
+      font-weight: 400
+      line-height: 30px
+      margin-bottom: 50px
+      &_small 
+         font-size: 20px
+         max-width: 75%
+      &_pad 
+         max-width: 100%
+   &__block 
+      width: 100%
+      display: flex
+      align-items: center
+      padding: 50px
+      border: 2px solid rgb(244, 188, 32)
+      border-radius: 10px
+      background: $yellow
+      margin-bottom: 20px
+      h3 
+         margin-top: 0
+         margin-bottom: 0
+         margin-right: 70px
+         font-size: 25px
+         font-weight: 700
+         line-height: 130.09%
+         text-transform: uppercase
+         min-width: 621px 
+         color: rgba(0, 0, 0, 0.4)
+         span 
+            color: rgba(0, 0, 0, 1)
+      ol, ul 
+         padding: 0
+         margin: 0
+         li 
+            color: rgba(0, 0, 0, 1)
+            font-size: 25px
+            font-weight: 400
+            line-height: 36px
+      ul 
+         li 
+            display: flex
+            align-items: flex-start
+            &:before 
+               content: ""
+               display: block
+               border-radius: 50% 
+               width: 3px
+               height: 3px
+               background: rgba(0, 0, 0, 1)
+               margin-right: 10px
+               position: relative
+               top: 14px
+   &__area 
+      padding: 50px
+      margin-bottom: 50px
+      width: 100%
+      border-radius: 10px
+      background: $yellow
+      p
+         color: rgba(0, 0, 0, 0.8)
+         font-size: 25px
+         font-weight: 400
+         line-height: 30px
+         width: 100%
+         max-width: 87%
+   .text__block_2
+      margin-bottom: 50px
+      ol 
+         position: relative
+         left: 20px
+   &__sub 
+      font-size: 25px
+      font-weight: 700
+      line-height: 130.09%
+      text-transform: uppercase
+.nav-black 
+   .nav__box
+      background: black
+.form-page 
+   padding-bottom: 150px
+   &__text
+      font-size: 25px
+      font-weight: 600
+      line-height: 120%
+      text-transform: uppercase
+      margin-bottom: 30px
+   .popup__wrap
+      margin-top: 50px
+      padding: 50px
+      border-radius: 10px
+      background: rgba(43, 40, 47, 1)
+      .popup__title
+         font-size: 40px
+         line-height: 49px
+         margin-bottom: 50px
+.thanks 
+   .popup__title
+      text-align: center
+   &__btn 
+      width: 486px
+      margin: 0 auto
+      background: transparent
+      border: 2px solid rgba(244, 188, 32, 1)
+      color: $yellow
+      &:hover 
+         background: $yellow
+         color: white
+.per 
+   border-radius: 40px
+   background: rgba(255, 255, 255, 1)
+   overflow: hidden
+   padding: 100px 0
+   margin-top: 150px
+   p 
+      color: rgba(0, 0, 0, 1)
+   &__title 
+      font-size: 40px
+      font-weight: 700
+      line-height: 49px
+      text-transform: uppercase
+      margin-bottom: 50px
+      span 
+         color: rgba(217, 53, 20, 1)
+   .text__block
+      border: 1px solid rgba(0, 0, 0, 1)
+      border-radius: 10px
+      background: rgba(251, 230, 173, 1)
+      margin-bottom: 50px
+   .text__area
+      border: 1px solid rgba(0, 0, 0, 1)
+      border-radius: 10px
+      background: rgba(251, 230, 173, 1)
+   .text__block h3
+      color: rgba(0, 0, 0, 1)
+      span 
+         color: rgba(217, 53, 20, 1)
+   .text__el
+      a 
+         font-weight: 800
+         color: rgba(0, 0, 0, 1)
+         &:hover 
+            color: rgba(217, 53, 20, 1)
+      &.last 
+         margin-bottom: 0
+.who 
+   padding: 150px 0
+   h2 
+      text-align: left
+      font-size: 259px
+      letter-spacing: 1.2rem
+      margin-bottom: 150px
+      position: relative
+      left: -10px
+   .container
+      max-width: 1629px
+   .text__area
+      background: rgba(43, 40, 47, 1)
+      border: none
+      p 
+         color: rgba(255, 255, 255, 1)
+         margin-bottom: 30px
+         &:last-child
+            margin-bottom: 0
+   .info__sub
+      margin-bottom: 50px
+   .info__name 
+      margin-bottom: 50px
+.rev 
+   padding-bottom: 120px
+   .container
+      max-width: 1629px
+      position: relative
+      .arr 
+         display: flex
+         align-items: center
+         justify-content: center
+         width: 85px
+         height: 85px
+         background: rgba(244, 188, 32, 1)
+         border-radius: 50%
+         cursor: pointer
+         transition: 0.5s
+         position: absolute
+         bottom: 31%
+         z-index: 3
+         &:hover 
+            background: black 
+            .svg 
+               path 
+                  fill: $yellow
+      .swiper-button-prev3
+         left: -25px
+      .swiper-button-next3
+         right: -25px
+      .swiper-button-disabled
+         opacity: 0.4
+   .info__top
+      margin-top: 0
+   .swiper3 
+      overflow: hidden
+      .swiper-slide
+         border-radius: 10px
+         background: rgba(43, 40, 47, 1)
+         padding: 50px
+         img 
+            margin-bottom: 30px
+            display: block
+            overflow: hidden
+            object-fit: cover 
+            width: 172px
+            height: 202px
+            border-radius: 10px
+         p 
+            color: rgba(255, 255, 255, 1)
+            font-size: 25px
+            font-weight: 700
+            line-height: 30px
+            text-transform: uppercase
+            margin-bottom: 60px
+         small 
+            display: block
+            color: rgba(255, 255, 255, 1)
+            font-size: 25px
+            font-weight: 400
+            line-height: 30px
