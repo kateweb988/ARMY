@@ -416,7 +416,7 @@ input:-moz-placeholder {
   margin-right: 11px; }
 
 .custom-checkbox:checked + label::before {
-  background: url( ../img/check2.png) no-repeat center center;
+  background: url(../img/check2.png) no-repeat center center;
   background-size: 8px; }
 
 .swiper-pagination {
@@ -472,7 +472,7 @@ input:-moz-placeholder {
   content: "";
   position: absolute;
   right: 0px;
-  background: url( ../img/down-arrow.png) no-repeat !important;
+  background: url(../img/down-arrow.png) no-repeat !important;
   width: 7px;
   left: inherit;
   height: 5px;
@@ -485,7 +485,7 @@ input:-moz-placeholder {
   content: "";
   position: absolute;
   right: 0px;
-  background: url( ../img/down-arrow.png) no-repeat !important;
+  background: url(../img/down-arrow.png) no-repeat !important;
   width: 7px;
   left: inherit;
   height: 5px;
@@ -980,7 +980,7 @@ input:-moz-placeholder {
     .accordeon .accordeon__button:hover {
       color: #F4BC20; }
     .accordeon .accordeon__button:after {
-      background: url( ../img/1.svg) no-repeat !important;
+      background: url(../img/1.svg) no-repeat !important;
       width: 63px;
       height: 63px;
       right: 30px;
@@ -996,7 +996,7 @@ input:-moz-placeholder {
   color: #1c1a1f !important;
   background: #F4BC20; }
   .accordeon__button.active:after {
-    background: url( ../img/2.svg) no-repeat !important; }
+    background: url(../img/2.svg) no-repeat !important; }
 
 .panel__text {
   display: flex;
@@ -1608,6 +1608,8 @@ input:-moz-placeholder {
     margin-left: 0 !important; }
   .arcticmodal-container_i {
     width: 100%; }
+  .header {
+    max-width: 1278px; }
   .info h2 {
     font-size: 182px; }
   .info__name {
@@ -1724,7 +1726,7 @@ input:-moz-placeholder {
     top: 20px;
     right: 0px;
     z-index: 11;
-    background: url( ../img/bur1.svg) no-repeat center center;
+    background: url(../img/bur1.svg) no-repeat center center;
     overflow: hidden; }
   .menu-btn span {
     width: 38px;
@@ -1801,7 +1803,7 @@ input:-moz-placeholder {
     top: 20px;
     right: 0px;
     z-index: 11;
-    background: url( ../img/bur2.svg) no-repeat center center; }
+    background: url(../img/bur2.svg) no-repeat center center; }
   .menu-btn.active span:nth-of-type(1) {
     display: none; }
   .menu-btn.active span:nth-of-type(2) {
