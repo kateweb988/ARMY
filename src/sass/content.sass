@@ -396,7 +396,7 @@ input:-moz-placeholder
    padding: 0 20px 
    z-index: 20
    p 
-      color: rgb(255, 255, 255)
+      color: rgba(0, 0, 0, 1)
       font-size: 20px
       font-weight: 600
       line-height: 19.23px
@@ -425,7 +425,7 @@ input:-moz-placeholder
    &__txt 
       margin-bottom: 128px
       p
-         color: rgba(255, 255, 255, 1)
+         color: rgba(0, 0, 0, 1)
          font-size: 20px
          font-weight: 400
          line-height: 30px
@@ -440,7 +440,7 @@ input:-moz-placeholder
       line-height: 30px
       text-transform: uppercase
       span 
-         color: rgba(255, 255, 255, 0.5)
+         color: rgba(0, 0, 0, 0.5)
    &__top 
       margin-bottom: 72px
       align-items: flex-start
@@ -459,17 +459,19 @@ input:-moz-placeholder
       line-height: 120.09%
       text-transform: uppercase
       .bb 
-         color: rgb(255, 255, 255)
+         color: rgba(0, 0, 0, 1)
          font-size: 25px
          font-weight: 700
          line-height: 100%
          display: block
          text-transform: uppercase
          margin-top: 58px
+      span 
+         color: rgba(35, 146, 127, 1)
    &__bottom 
       align-items: flex-end
       p 
-         color: rgba(255, 255, 255, 0.7)
+         color: rgba(0, 0, 0, 1)
          font-size: 25px
          font-weight: 400
          line-height: 30px
@@ -485,15 +487,18 @@ input:-moz-placeholder
    &__btn 
       position: relative
       top: 0px
+      height: 100px
    &__flex 
       justify-content: space-between
    &__block 
       width: 49.42%
       padding: 50px
+      box-sizing: border-box
+      border: 1px solid rgba(0, 0, 0, 1)
       border-radius: 10px
-      background: rgb(43, 40, 47)
+      background: rgba(251, 230, 173, 1)
    &__sum 
-      color: $yellow
+      color: rgba(0, 0, 0, 1)
       font-size: 65px
       font-weight: 700
       line-height: 120%
@@ -507,30 +512,28 @@ input:-moz-placeholder
          font-weight: 400
          line-height: 30px
          text-transform: uppercase
-         color: rgba(255, 255, 255, 0.6)
+         color: rgba(0, 0, 0, 0.6)
          margin-right: 46px
          margin-bottom: 40px
          span 
             font-weight: 800
-            color: white
+            color: rgba(0, 0, 0, 1)
          &:last-child
             margin-right: 0
             margin-bottom: 0
    &__text 
-      color: rgb(255, 255, 255)
+      color: rgba(0, 0, 0, 1)
       font-size: 25px
       font-weight: 400
       line-height: 30px
       text-transform: uppercase
    &__link 
       margin-top: 34px
-      background: transparent
       width: 100%
-      color: $yellow
-      border: 2px solid $yellow
       &:hover 
-         background: $yellow
-         color: black
+         background: rgba(35, 146, 127, 1)
+         color: white
+         border: 1px solid rgba(35, 146, 127, 1)
    &__wrap 
       align-items: flex-end
       margin-top: -164px
@@ -550,7 +553,7 @@ input:-moz-placeholder
             margin-bottom: 40px
             align-items: center
             p 
-               color: rgb(255, 255, 255)
+               color: rgba(0, 0, 0, 1)
                font-size: 25px
                font-weight: 500
                line-height: 30px
@@ -571,16 +574,17 @@ input:-moz-placeholder
       text-align: center
       padding: 40px 0 30px 
       p 
-         color: rgb(255, 255, 255)
+         color: rgba(0, 0, 0, 1)
          font-size: 30px
          font-weight: 800
          line-height: 37px
          transition: 0.5s
          text-transform: uppercase
       &:hover 
-         background: $yellow
+         border: 2px solid rgba(27, 96, 84, 1)
+         background: rgba(27, 96, 84, 1)
          p 
-            color: rgb(28, 26, 31)
+            color: white
          .info__image:after 
             background: #DBA612
    &__image 
@@ -617,13 +621,15 @@ input:-moz-placeholder
       justify-content: space-between
       overflow: hidden
       padding: 0 50px 
-      color: rgb(255, 255, 255)
+      color: rgba(0, 0, 0, 1)
       font-size: 25px
       font-weight: 700
       line-height: 130.09%
-      border-radius: 10px
-      background: rgb(43, 40, 47)
       text-transform: uppercase
+      box-sizing: border-box
+      border: 1px solid rgba(0, 0, 0, 1)
+      border-radius: 10px
+      background: rgba(223, 237, 234, 1)
       height: 114px
       &:hover 
          color: $yellow
@@ -641,6 +647,7 @@ input:-moz-placeholder
 .accordeon__button.active
    color: rgb(28, 26, 31) !important
    background: $yellow
+   border: 1px solid $yellow
    &:after
       background: url(/img/2.svg) no-repeat !important
 .panel__text
@@ -649,11 +656,11 @@ input:-moz-placeholder
    padding: 25px 40px
    max-width: 100%
    box-sizing: border-box
-   border-bottom: 2px solid rgb(78, 78, 78)
+   border-bottom: 2px solid rgba(220, 220, 220, 1)
    overflow: hidden
-   border-top: 2px solid rgb(78, 78, 78)
+   border-top: 2px solid rgba(220, 220, 220, 1)
    span 
-      color: $yellow
+      color: #23927F
       font-size: 25px
       font-weight: 700
       line-height: 130.09%
@@ -669,11 +676,11 @@ input:-moz-placeholder
          display: block
          right: 0
          top: -26px
-         background: rgb(78, 78, 78)
+         background: rgba(220, 220, 220, 1)
          height: 84px
          width: 1px
    p
-      color: rgb(255, 255, 255)
+      color: rgba(0, 0, 0, 1)
       font-size: 25px
       font-weight: 400
       line-height: 130.09%
@@ -698,7 +705,7 @@ input:-moz-placeholder
             span 
                margin-right: 0 !important
                padding-right: 0 !important
-               color: rgb(255, 255, 255)
+               color: rgba(0, 0, 0, 1)
                font-size: 25px
                font-weight: 400
                min-width: inherit !important
@@ -727,7 +734,7 @@ input:-moz-placeholder
       width: 100%
       max-width: 100%
       border: none
-      color: rgb(255, 255, 255)
+      color: rgba(0, 0, 0, 1)
       font-size: 25px
       font-weight: 500
       line-height: 30px
@@ -744,6 +751,7 @@ input:-moz-placeholder
    h2 
       font-size: 239px
       margin-bottom: 130px
+      color: $yellow
       letter-spacing: 0.6rem
    &__row 
       align-items: center
@@ -751,12 +759,12 @@ input:-moz-placeholder
       align-items: center
       p 
          font-weight: 600
-         color: $yellow
+         color: rgba(35, 146, 127, 1)
          font-size: 40px
          line-height: 140%
       a 
          font-weight: 600
-         color: white
+         color: rgba(0, 0, 0, 1)
          line-height: 140%
          font-size: 40px
          margin-left: 10px
@@ -766,15 +774,15 @@ input:-moz-placeholder
       margin-left: 48px
       a
          font-weight: 600
-         color: $yellow
+         color: rgba(35, 146, 127, 1)
          font-size: 40px
          line-height: 140%
          &:hover 
-            color: white
+            color: $yellow
          &:last-child
             margin-left: 10px
    &__sub 
-      color: rgb(255, 255, 255)
+      color: rgba(0, 0, 0, 1)
       font-size: 25px
       font-weight: 600
       line-height: 30px
@@ -854,14 +862,12 @@ input:-moz-placeholder
    flex-wrap: wrap 
    button 
       height: 73px
-      background: transparent
-      width: 100%;
-      color: $yellow
-      border: 2px solid $yellow
+      width: 100%
       width: 32.4%
       &:hover 
-         background: $yellow
-         color: black
+         background: #23927f
+         color: white 
+         border: 1px solid #23927f
 .form-item 
    display: inline-block
    vertical-align: top
@@ -925,7 +931,7 @@ input:-moz-placeholder
       top: 10px
 .page 
    .header 
-      border: 2px solid rgb(244, 188, 32)
+      border: none
       padding-bottom: 180px
       p 
          position: relative   
@@ -998,7 +1004,7 @@ input:-moz-placeholder
    &__el 
       width: 100%
       max-width: 82% 
-      color: rgba(255, 255, 255, 1)
+      color: rgba(0, 0, 0, 1)
       font-size: 25px
       font-weight: 400
       line-height: 30px
@@ -1008,15 +1014,18 @@ input:-moz-placeholder
          max-width: 75%
       &_pad 
          max-width: 100%
+      span 
+         font-weight: 600
    &__block 
       width: 100%
       display: flex
       align-items: center
       padding: 50px
-      border: 2px solid rgb(244, 188, 32)
-      border-radius: 10px
-      background: $yellow
       margin-bottom: 20px
+      box-sizing: border-box
+      border: 2px solid rgba(3, 3, 3, 1)
+      border-radius: 10px
+      background: rgba(251, 230, 173, 1)
       h3 
          margin-top: 0
          margin-bottom: 0
@@ -1026,7 +1035,7 @@ input:-moz-placeholder
          line-height: 130.09%
          text-transform: uppercase
          min-width: 621px 
-         color: rgba(0, 0, 0, 0.4)
+         color: rgba(23, 137, 118, 1)
          span 
             color: rgba(0, 0, 0, 1)
       ol, ul 
@@ -1037,6 +1046,8 @@ input:-moz-placeholder
             font-size: 25px
             font-weight: 400
             line-height: 36px
+            span 
+               font-weight: 700
       ul 
          li 
             display: flex
@@ -1050,13 +1061,15 @@ input:-moz-placeholder
                background: rgba(0, 0, 0, 1)
                margin-right: 10px
                position: relative
-               top: 14px
+               top: 16px
    &__area 
       padding: 50px
       margin-bottom: 50px
       width: 100%
       border-radius: 10px
-      background: $yellow
+      box-sizing: border-box
+      border: 1px solid rgba(3, 3, 3, 1)
+      background: rgba(251, 230, 173, 1)
       p
          color: rgba(0, 0, 0, 0.8)
          font-size: 25px
@@ -1064,16 +1077,20 @@ input:-moz-placeholder
          line-height: 30px
          width: 100%
          max-width: 87%
+         span 
+            font-weight: 700
    .text__block_2
       margin-bottom: 50px
       ol 
          position: relative
-         left: 20px
+         left: 24px
    &__sub 
       font-size: 25px
       font-weight: 700
       line-height: 130.09%
       text-transform: uppercase
+      span 
+         color: rgba(23, 137, 118, 1)
 .nav-black 
    .nav__box
       background: black
@@ -1089,29 +1106,31 @@ input:-moz-placeholder
       margin-top: 50px
       padding: 50px
       border-radius: 10px
-      background: rgba(43, 40, 47, 1)
+      box-sizing: border-box
+      border: 1px solid rgba(0, 0, 0, 1)
+      background: rgba(251, 230, 173, 1)
       .popup__title
          font-size: 40px
          line-height: 49px
          margin-bottom: 50px
+         span 
+            color: rgba(23, 137, 118, 1)
 .thanks 
    .popup__title
       text-align: center
    &__btn 
       width: 486px
       margin: 0 auto
-      background: transparent
-      border: 2px solid rgba(244, 188, 32, 1)
-      color: $yellow
       &:hover 
-         background: $yellow
+         background: rgba(23, 137, 118, 1)
          color: white
+         border: 1px solid rgba(23, 137, 118, 1)
 .per 
    border-radius: 40px
    background: rgba(255, 255, 255, 1)
    overflow: hidden
-   padding: 100px 0
-   margin-top: 150px
+   padding: 100px 0 0
+   margin-top: 0px
    p 
       color: rgba(0, 0, 0, 1)
    &__title 
@@ -1121,7 +1140,7 @@ input:-moz-placeholder
       text-transform: uppercase
       margin-bottom: 50px
       span 
-         color: rgba(217, 53, 20, 1)
+         color: rgba(35, 146, 127, 1)
    .text__block
       border: 1px solid rgba(0, 0, 0, 1)
       border-radius: 10px
@@ -1134,7 +1153,7 @@ input:-moz-placeholder
    .text__block h3
       color: rgba(0, 0, 0, 1)
       span 
-         color: rgba(217, 53, 20, 1)
+         color: rgba(35, 146, 127, 1)
    .text__el
       a 
          font-weight: 800
@@ -1152,16 +1171,25 @@ input:-moz-placeholder
       margin-bottom: 150px
       position: relative
       left: -10px
+   .text__el 
+      margin-top: 50px
+      a 
+         font-weight: 700
+         color: rgba(0, 0, 0, 1)
+         &:hover 
+            color: $yellow
+   .text__el.last 
+      margin-bottom: 120px
    .container
       max-width: 1629px
-   .text__area
-      background: rgba(43, 40, 47, 1)
-      border: none
-      p 
-         color: rgba(255, 255, 255, 1)
-         margin-bottom: 30px
-         &:last-child
-            margin-bottom: 0
+   // .text__area
+   //    background: rgba(43, 40, 47, 1)
+   //    border: none
+   //    p 
+   //       color: rgba(255, 255, 255, 1)
+   //       margin-bottom: 30px
+   //       &:last-child
+   //          margin-bottom: 0
    .info__sub
       margin-bottom: 50px
    .info__name 
@@ -1201,7 +1229,7 @@ input:-moz-placeholder
       overflow: hidden
       .swiper-slide
          border-radius: 10px
-         background: rgba(43, 40, 47, 1)
+         background: rgba(251, 230, 173, 1)
          padding: 50px
          img 
             margin-bottom: 30px
@@ -1212,7 +1240,7 @@ input:-moz-placeholder
             height: 202px
             border-radius: 10px
          p 
-            color: rgba(255, 255, 255, 1)
+            color: rgba(0, 0, 0, 1)
             font-size: 25px
             font-weight: 700
             line-height: 30px
@@ -1220,7 +1248,18 @@ input:-moz-placeholder
             margin-bottom: 60px
          small 
             display: block
-            color: rgba(255, 255, 255, 1)
+            color: rgba(0, 0, 0, 1)
             font-size: 25px
             font-weight: 400
             line-height: 30px
+.info__top5 + .accordeon__panel .panel__text span
+   color: $yellow
+.info-page
+   padding-bottom: 0 !important
+.swiper-custom-pagination3
+   display: none
+.form-page__text
+   font-size: 23px
+   span 
+      color: rgba(35, 146, 127, 1)
+
